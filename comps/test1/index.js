@@ -1,6 +1,6 @@
 import hoc from 'comps/test1/hoc'
 import React from 'react'
-import {V1 as C1} from 'comps/test1/test2/test2'
+import {V1 as C1} from 'comps/test1/test2/index'
 
 const v1=
 ({children:{greeting},onClick})=>

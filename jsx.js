@@ -1,5 +1,5 @@
 import React from 'react'
-import {V1 as C1,V2 as C2} from 'comps/test1/test1'
+import {V1 as C1,V2 as C2} from 'comps/test1/index'
 
 export default
 (
