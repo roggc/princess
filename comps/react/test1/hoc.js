@@ -10,11 +10,7 @@ class extends React.Component
     (
       {
         ...this.state,
-        greeting:
-        {
-          ...this.state.greeting,
-          greeting2:'bye'
-        }
+        greeting:'bye'
       }
     )
     this.props2=
@@ -23,11 +19,8 @@ class extends React.Component
     }
     this.state=
     {
-      greeting:
-      {
-        greeting2:'hello'
-      }
+      greeting:'hello'
     }
-    this.render=()=><C {...this.props2} {...this.props}>{this.state}</C>
+    this.render=()=><C {...this.props2} {...this.props}>{{...this.props.children,...this.state}}</C>
   }
 }

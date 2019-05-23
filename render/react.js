@@ -1,10 +1,11 @@
 import React from 'react'
-import Test1 from 'comps/react/test1/test1'
+import {V1 as C1,V2 as C2} from 'comps/react/test1/test1'
 
 export default
 (
   ()=>
   <div>
-    <Test1/>
+    <C1/>
+    <C2/>
   </div>
 )()
