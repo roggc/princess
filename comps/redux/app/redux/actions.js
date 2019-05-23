@@ -1,4 +1,4 @@
-import * as types from 'comps/app/redux/types'
+import * as types from 'comps/redux/app/redux/types'
 
 export const appSetGreeting=val=>
 (

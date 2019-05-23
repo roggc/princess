@@ -12,7 +12,7 @@ const comp=props=>
   (
     <div>
       <button onClick={setGreeting}>set greeting</button>
-      <div>{props.app.greeting}</div>
+      <div>{props.app.greeting.greeting2.greeting3}</div>
     </div>
   )
   return el

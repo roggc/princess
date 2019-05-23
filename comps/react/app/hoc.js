@@ -3,22 +3,14 @@ import React from 'react'
 export default Comp=>
 class extends React.Component
 {
-  constructor(props)
+  constructor({state, ...props})
   {
     super(props)
-    this.state={greeting:'hello'}
-    this.inputRef=null
-    this.getRef=el=>this.inputRef=el
-    this.onClick=()=>this.setState({...this.state,greeting:this.inputRef.value})
-    this.props2=
-    {
-      onClick:this.onClick
-      ,getRef:this.getRef
-    }
+    this.state={state:state}
   }
 
   render()
   {
-    return <Comp {...this.props2} {...this.state} {...this.props}/>
+    return <Comp {...this.state} {...this.props}/>
   }
 }

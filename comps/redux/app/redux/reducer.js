@@ -1,9 +1,9 @@
-import * as types from 'comps/app/redux/types'
+import * as types from 'comps/redux/app/redux/types'
 
 export default
 (val=
 {
-  greeting:'hello app'
+  greeting:{greeting2:{greeting3:'hello app'}}
 },act)=>
 {
   switch (act.type)
@@ -12,7 +12,7 @@ export default
       val=
       {
         ...val,
-        greeting:act.val
+        greeting:{greeting2:{greeting3:act.val}}
       }
       return val
     default:

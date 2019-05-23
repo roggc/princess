@@ -1,11 +1,10 @@
 import React from 'react'
-import App from 'comps/react/app/app'
+import Test1 from 'comps/react/test1/test1'
 
 export default
 (
   ()=>
   <div>
-    <App/>
-    <App/>
+    <Test1/>
   </div>
 )()
