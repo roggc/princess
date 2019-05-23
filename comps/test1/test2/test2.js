@@ -1,4 +1,4 @@
-import hoc from 'comps/react/test1/test2/hoc'
+import hoc from 'comps/test1/test2/hoc'
 import React from 'react'
 
 const v1=

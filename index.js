@@ -8,7 +8,7 @@ import 'favicon/favicon-32x32'
 import 'favicon/favicon'
 import 'favicon/site'
 
-import jsx from 'render/react'
+import jsx from 'jsx'
 
 render
 (

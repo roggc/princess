@@ -1,1 +1,0 @@
-export const APP_SET_GREETING='APP_SET_GREETING'
