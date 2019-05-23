@@ -1,5 +1,4 @@
-import ReactDom from 'react-dom'
-import React from 'react'
+import {render} from 'react-dom'
 
 import 'favicon/android-chrome-192x192'
 import 'favicon/android-chrome-512x512'
@@ -9,8 +8,10 @@ import 'favicon/favicon-32x32'
 import 'favicon/favicon'
 import 'favicon/site'
 
-ReactDom.render
+import jsx from 'render/react'
+
+render
 (
-  <div>hello</div>,
+  jsx,
   document.getElementById('root')
 )
