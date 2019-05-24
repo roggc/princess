@@ -1,3 +1,5 @@
 ## princess
 
-hello ssr
+evolution of *virgen*
+
+adds *ssr* and *react-router* to the capabilities
