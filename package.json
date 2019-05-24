@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "webpackdev": "webpack -w --mode development --config ./webpack.config.js",
-    "nodemon": "nodemon --exec \"babel-node -r node_modules/dotenv/config\" ./server.js",
-    "dev": "npm run webpackdev& npm run nodemon"
+    "wpindexdev": "webpack -w --mode development --config ./wpindex.config.js",
+    "wpssrdev": "webpack -w --mode development --config ./wpssr.config.js",
+    "nodemon": "nodemon --exec \"babel-node -r node_modules/dotenv/config --inspect\" ./server.js",
+    "dev": "npm run wpindexdev& npm run wpssrdev& npm run nodemon"
   },
   "author": "",
   "license": "ISC",
@@ -23,9 +24,11 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.6.0",
+    "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.0",
     "redux": "^4.0.1",
     "sass-loader": "^7.1.0",
     "webpack": "^4.32.1",

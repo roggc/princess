@@ -1,9 +1,6 @@
-//wbclient.config.js
-
 const path = require('path')
-const webpack = require('webpack')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const HtmlWebpackPlugin= require('html-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports =
@@ -35,7 +32,7 @@ module.exports =
         ],
       },
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js)$/,
         exclude: /node_modules/,
         use:
         {
@@ -48,22 +45,29 @@ module.exports =
         loaders:
         [
           MiniCssExtractPlugin.loader,
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options:
+            {
+              modules: true
+            }
+          },
           'sass-loader'
         ]
-      },
+      }
     ]
   },
   plugins:
   [
     new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin
     (
       {
-        template: './index.html'
+        template: './index.html',
+        filename: 'foo.html'
       }
-    ),
-    new MiniCssExtractPlugin()
+    )
   ],
   resolve:
   {
@@ -73,5 +77,12 @@ module.exports =
       path.resolve(__dirname, "./")
     ],
     extensions: ['.js','.css','.scss','.sass','.ico','.png','.webmanifest']
+  },
+  watchOptions:
+  {
+    ignored:
+    [
+      path.join(__dirname, 'node_modules')
+    ]
   }
 }
